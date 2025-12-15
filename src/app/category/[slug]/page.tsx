@@ -165,6 +165,6 @@ function CategoryPageClient({ slug }: { slug: string }) {
   return <DefaultCategoryPage categoryName={categoryName} slug={slug} />;
 }
 
-export default function CategoryPage({ params }: { params: { slug: string } }) {
+export default function CategoryPage({ params }: any) {
   return <CategoryPageClient slug={params.slug} />;
 }
