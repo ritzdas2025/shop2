@@ -5,6 +5,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 const nextConfig: NextConfig = {
+  // build a standalone output so we can ship a minimal server bundle
+  // (reduces runtime memory and node_modules size for cPanel)
+  output: 'standalone',
   /* config options here */
   images: {
     remotePatterns: [
