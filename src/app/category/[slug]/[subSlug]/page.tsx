@@ -84,11 +84,7 @@ function SubCategoryPageClient({
 }
 
 
-export default function SubCategoryPage({
-  params,
-}: {
-  params: { slug: string; subSlug: string };
-}) {
+export default function SubCategoryPage({ params }: any) {
   const { slug, subSlug } = params;
   return <SubCategoryPageClient slug={slug} subSlug={subSlug} />;
 }
