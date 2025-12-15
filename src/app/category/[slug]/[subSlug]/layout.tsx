@@ -14,7 +14,7 @@ const specialCategories: { [key: string]: string } = {
   'tools-industrial': 'Tools & Industrial',
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: any): Promise<Metadata> {
   const { slug, subSlug } = params;
   const categoryName = specialCategories[slug] || categories.find((c) => slugify(c.name) === slug)?.name;
 
