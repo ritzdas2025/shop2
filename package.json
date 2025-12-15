@@ -8,7 +8,6 @@
     "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts",
     "build": "next build",
     "start": "node server.js",
-    "postinstall": "next build",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "analyze": "cross-env ANALYZE=true next build"
