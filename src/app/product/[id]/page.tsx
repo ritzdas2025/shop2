@@ -7,7 +7,7 @@ type Props = {
   params: { id: string };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: any): Promise<Metadata> {
   const product = allProductsData.find((p) => p.id === params.id);
 
   if (!product) {
@@ -22,6 +22,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ProductDetailPage({ params }: { params: { id: string } }) {
+export default function ProductDetailPage({ params }: any) {
   return <ProductDetailClient productId={params.id} />;
 }
