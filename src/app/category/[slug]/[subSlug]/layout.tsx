@@ -3,7 +3,9 @@ import { categories, subCategories } from '@/lib/data';
 import type { Metadata } from 'next';
 
 type Props = {
-  params: { slug: string, subSlug: string };
+  // use a relaxed params type so Next's internal Layout/GenerateMetadata
+  // type constraints don't cause a build-time mismatch here
+  params: Record<string, string>;
 };
 
 const specialCategories: { [key: string]: string } = {
